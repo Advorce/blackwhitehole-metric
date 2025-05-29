@@ -2,7 +2,7 @@
 
 This document evaluates whether the stress-energy tensor derived from the metric satisfies the classical energy conditions: NEC, WEC, SEC, and DEC.
 
-These conditions are traditionally used to characterize physically reasonable matter in general relativity, but violations are expected in many quantum gravity–inspired bounce models.
+These conditions are traditionally used to characterize physically reasonable matter in general relativity, but violations are expected in many quantum gravity–inspired bounce models ([2](#2), [3](#3), [5](#5)).
 
 ---
 
@@ -29,13 +29,13 @@ Below is a plot showing the variation of energy density \( \rho \), radial press
 
 ## 🧠 Interpretation
 
-- ✅ **Near the bounce (small \( r \))**: All energy conditions are satisfied or only mildly violated. This supports the viability of the geometry near the core.
+- ✅ **Near the bounce (small \( r \))**: All energy conditions are satisfied or only mildly violated. This supports the viability of the geometry near the core ([2](#2), [7](#7)).
 - ❌ **At larger radius**: NEC and WEC become **increasingly violated**, but these violations are:
   - Localized
   - Small in magnitude
   - Non-divergent
 
-This is **typical** for quantum-inspired bounce models.
+This is **typical** for quantum-inspired bounce models ([3](#3), [5](#5)).
 
 ---
 
@@ -54,9 +54,9 @@ This is **typical** for quantum-inspired bounce models.
 
 These results align with findings from:
 
-- **Han et al.** and **Feng et al.** on regular black hole–to–white hole transitions
-- **Loop quantum gravity** models with effective stress-energy violations
-- Observations that singularity-free geometries typically **require** NEC/WEC violation in confined regions
+- **Han et al.** and **Feng et al.** on regular black hole–to–white hole transitions ([2](#2), [3](#3))
+- **Loop quantum gravity** models with effective stress-energy violations ([7](#7))
+- Observations that singularity-free geometries typically **require** NEC/WEC violation in confined regions ([1](#1), [5](#5))
 
 ✅ Your metric exhibits:
 
@@ -74,3 +74,15 @@ This supports its interpretation as a **plausible bounce geometry** under extend
 The next step is to analyze the **global causal structure** and geodesic completeness.
 
 📄 [`docs/causal-structure.md`](./causal-structure.md)
+
+---
+
+## 📚 References
+
+1. [S. Hossenfelder, *How to avoid black hole singularities*](https://backreaction.blogspot.com/2020/01/how-to-avoid-black-hole-singularities.html)  
+2. [Han et al., *Quantum-corrected black–white transitions*, arXiv:2302.00792](https://arxiv.org/abs/2302.00792)  
+3. [Feng et al., *Effective matter and NEC violation*, arXiv:2205.03167](https://arxiv.org/abs/2205.03167)  
+4. [Hergott et al., *Mass profiles and bounce duration*, arXiv:2211.16499](https://arxiv.org/abs/2211.16499)  
+5. [Simpson & Visser, *Black-bounce metrics*, arXiv:1812.07114](https://arxiv.org/abs/1812.07114)  
+6. [S.A. Hayward, *Formation and evaporation of regular black holes*, Phys. Rev. Lett. 96, 031103](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.96.031103)  
+7. [Ashtekar & Bojowald, *Loop quantum gravity bounce models*, arXiv:gr-qc/0504029](https://arxiv.org/abs/gr-qc/0504029)
