@@ -10,6 +10,7 @@ This spacetime metric is defined as:
 ds² = -[1 + (c² r²)/(2GM) - (r/r_min) * exp(-r_min/r)] * (dt² / c²)
      + [1 + (c² r²)/(2GM) - (r/r_min) * exp(-r_min/r)]⁻¹ dr²
      + r² (dθ² + sin²θ dφ²)
+```
 
 Where:
 - `r_min` is a minimal radius representing a bounce point
