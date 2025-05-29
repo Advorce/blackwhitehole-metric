@@ -71,11 +71,11 @@ Created and documented by **Advorce**, with symbolic assistance from ChatGPT.
 
 ## 📚 References
 
-[1] S. Hossenfelder, *How to avoid black hole singularities*, Backreaction Blog (2020).  
-[2] Han et al., *Quantum-corrected black–white transitions*, arXiv:2302.00792.  
-[3] Feng et al., *Effective matter and NEC violation*, arXiv:2205.03167.  
-[4] Hergott et al., *Mass profiles and bounce duration*, arXiv:2211.16499.  
-[5] Simpson & Visser, *Black-bounce metrics*, arXiv:1812.07114.  
-[6] Hayward, S.A., *Formation and evaporation of regular black holes*, Phys. Rev. Lett. 96, 031103 (2006).  
-[7] Ashtekar & Bojowald, *Loop quantum gravity bounce models*, arXiv:gr-qc/0504029.  
+[1] S. Hossenfelder, *How to avoid black hole singularities*, [Backreaction Blog](https://backreaction.blogspot.com/2020/01/how-to-avoid-black-hole-singularities.html).  
+[2] Han et al., *Quantum-corrected black–white transitions*, [arXiv:2302.00792](https://arxiv.org/abs/2302.00792).  
+[3] Feng et al., *Effective matter and NEC violation*, [arXiv:2205.03167](https://arxiv.org/abs/2205.03167).  
+[4] Hergott et al., *Mass profiles and bounce duration*, [arXiv:2211.16499](https://arxiv.org/abs/2211.16499).  
+[5] Simpson & Visser, *Black-bounce metrics*, [arXiv:1812.07114](https://arxiv.org/abs/1812.07114).  
+[6] Hayward, S.A., *Formation and evaporation of regular black holes*, [Phys. Rev. Lett. 96, 031103](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.96.031103).  
+[7] Ashtekar & Bojowald, *Loop quantum gravity bounce models*, [arXiv:gr-qc/0504029](https://arxiv.org/abs/gr-qc/0504029).  
 [8] Bardeen, J., *Non-singular solutions in GR*, Conference Proceedings (1968).
