@@ -1,0 +1,30 @@
+(* Define constants *)
+c = QuantityMagnitude[UnitConvert[Quantity["SpeedOfLight"]]];
+g = QuantityMagnitude[UnitConvert[Quantity["GravitationalConstant"]]];
+m = 1;
+rmin = 1;
+
+(* Define regularizing function and metric component *)
+f[r_] := Exp[-rmin/r];
+A[r_] := 1 + (c^2 r^2)/(2 g m) - (r/rmin) f[r];
+
+(* Geodesic equation: First-order system *)
+sol = NDSolve[
+  {
+    r'[τ] == v[τ],
+    v'[τ] == -0.5 D[A[r], r] /. r -> r[τ],
+    r[0] == 10,
+    v[0] == -1
+  },
+  {r, v},
+  {τ, 0, 30}
+];
+
+(* Plot the radial geodesic bounce *)
+Plot[
+  Evaluate[r[τ] /. sol],
+  {τ, 0, 30},
+  AxesLabel -> {"Proper Time τ", "Radius r"},
+  PlotLabel -> "Radial Geodesic Through Bounce",
+  PlotRange -> All
+]

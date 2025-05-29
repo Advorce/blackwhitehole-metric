@@ -1,0 +1,14 @@
+Final Metric:
+
+ds² = -A(r) dt²/c² + A(r)^(-1) dr² + r² (dθ² + sin²θ dφ²)
+
+Where:
+
+A(r) = 1 + (c² r²)/(2GM) - (r/r_min) * exp(-r_min / r)
+
+Components:
+- c: speed of light
+- G: gravitational constant
+- M: mass of the object
+- r_min: minimum radius (bounce)
+- f(r): exponential damping to avoid singularity
