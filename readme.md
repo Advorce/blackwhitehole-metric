@@ -32,7 +32,8 @@ Where:
 - Energy conditions are likely violated near the core.
 - Stability not yet analyzed.
 
-🌌 Physical Interpretation
+## 🌌 Physical Interpretation
+
 To eliminate the singularity at the black hole core, this model introduces a damping term that modifies the geometry at small 
 𝑟
 r. The result is a spacetime that allows test particles to approach a minimum radius 
