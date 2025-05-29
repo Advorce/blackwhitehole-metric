@@ -46,14 +46,14 @@ min
  , undergo a smooth bounce, and re-expand — potentially connecting to a white hole or new cosmological region.
 
 This behavior implies a violation of classical energy conditions, particularly near the core. Specifically:
-- **The Null Energy Condition (NEC) and possibly the Strong Energy Condition (SEC) are likely violated within the inner region.
-- **This is expected — and even required — in any model that avoids singularities under general relativity.
+- The Null Energy Condition (NEC) and possibly the Strong Energy Condition (SEC) are likely violated within the inner region.
+- This is expected — and even required — in any model that avoids singularities under general relativity.
 
 Such violations do not indicate unphysical behavior. They are consistent with many modern approaches, including:
-- **Regular black holes (Bardeen, Hayward)
-- **Planck-scale cores from quantum gravity
-- **Bounce cosmologies in loop quantum gravity
-- **Inflation and exotic matter models
+- Regular black holes (Bardeen, Hayward)
+- Planck-scale cores from quantum gravity
+- Bounce cosmologies in loop quantum gravity
+- Inflation and exotic matter models
 
 This model does not specify the stress-energy tensor required to support the geometry, but assumes a physically plausible form of exotic matter or effective quantum corrections that allow for this regular, traversable interior.
 
