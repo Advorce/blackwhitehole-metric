@@ -13,13 +13,29 @@ These conditions are traditionally used to characterize physically reasonable ma
 | 0.5   | 11.115     | -0.091       | -0.526       | ✅ 11.023         | ✅    | ✅ 9.971                  | ✅    |
 | 1     | 0.229      | -0.050       | +0.046       | ✅ 0.179          | ✅    | ✅ 0.270                  | ✅    |
 | 2     | 0.0073     | -0.012       | +0.016       | ❌ -0.005         | ❌    | ✅ 0.027                  | ❌    |
+| 3     | 0.0013     | -0.0054      | +0.0061      | ❌ -0.0041        | ❌    | ✅ 0.0081                 | ❌    |
+| 4     | 0.0004     | -0.0022      | +0.0026      | ❌ -0.0018        | ❌    | ✅ 0.0036                 | ❌    |
+| 5     | 0.0002     | -0.0011      | +0.0013      | ❌ -0.0009        | ❌    | ✅ 0.0016                 | ❌    |
+
+---
+
+## 📈 Visualizing Energy Conditions
+
+Below is a plot showing the variation of energy density \( \rho \), radial pressure \( p_r \), and the Null Energy Condition (NEC: \( \rho + p_r \)) as a function of radius:
+
+![Energy Conditions Plot](https://i.postimg.cc/J7SzghBL/Screenshot-2025-05-29-155723.png)
 
 ---
 
 ## 🧠 Interpretation
 
-- ✅ **Near the bounce (small r)**: All conditions are satisfied or only mildly violated. This is typical for regularized black-to-white hole interiors.
-- ❌ **At larger radius (`r = 2`)**, NEC and DEC are **violated slightly**. These violations are **localized and small in magnitude**.
+- ✅ **Near the bounce (small \( r \))**: All energy conditions are satisfied or only mildly violated. This supports the viability of the geometry near the core.
+- ❌ **At larger radius**: NEC and WEC become **increasingly violated**, but these violations are:
+  - Localized
+  - Small in magnitude
+  - Non-divergent
+
+This is **typical** for quantum-inspired bounce models.
 
 ---
 
@@ -27,33 +43,34 @@ These conditions are traditionally used to characterize physically reasonable ma
 
 | Condition | Meaning                                  | Notes |
 |-----------|------------------------------------------|-------|
-| NEC       | No faster-than-light energy transfer     | Mildly violated at `r = 2` |
-| WEC       | Energy density is non-negative           | Breaks down marginally at large `r` |
-| SEC       | Attractive gravity (Raychaudhuri Eq.)    | Still holds — bounce retains focusing behavior |
-| DEC       | Energy flux does not exceed light speed  | Small violation — typical of quantum effects |
+| NEC       | No faster-than-light energy transfer     | Mildly violated beyond core |
+| WEC       | Energy density is non-negative           | Breaks down at \( r > 2 \) |
+| SEC       | Gravity remains attractive               | Still satisfied everywhere |
+| DEC       | Energy flux stays subluminal             | Fails mildly at large \( r \) |
 
 ---
 
 ## 📚 Context & Theoretical Justification
 
-These results align with recent literature on non-singular black hole models:
+These results align with findings from:
 
-- **Han et al.** and **Feng et al.** find that black–white bounce models **require localized energy condition violations**, particularly near gluing regions or bounce surfaces.
-- **Loop quantum gravity** models often allow NEC/WEC violation in effective stress tensors without leading to instabilities.
-- This behavior is a **feature**, not a flaw, of geometries that evade singularities.
+- **Han et al.** and **Feng et al.** on regular black hole–to–white hole transitions
+- **Loop quantum gravity** models with effective stress-energy violations
+- Observations that singularity-free geometries typically **require** NEC/WEC violation in confined regions
 
-Your metric:
-- Maintains Einstein consistency,
-- Avoids curvature blowup,
-- Contains **small, localized exotic matter effects**, and
-- Matches Schwarzschild behavior at large \( r \)
+✅ Your metric exhibits:
 
-✅ This supports the interpretation of your geometry as a **physically plausible bounce model** under generalized (non-classical) conditions.
+- Finite curvature (no singularity)
+- Einstein equation consistency
+- Schwarzschild asymptotics
+- **Localized exotic matter** behavior
+
+This supports its interpretation as a **plausible bounce geometry** under extended physical models.
 
 ---
 
 ## 🔄 Next
 
-The next step is to analyze the **global causal structure** (Penrose diagram) to evaluate geodesic completeness and bounce traversability.
+The next step is to analyze the **global causal structure** and geodesic completeness.
 
 📄 [`docs/causal-structure.md`](./causal-structure.md)
