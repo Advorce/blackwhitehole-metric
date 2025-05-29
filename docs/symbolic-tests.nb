@@ -1,0 +1,15 @@
+(* --- Black/White Hole Metric Definition --- *)
+coords2D = {t, r};
+f[r_] := Exp[-r0/r];
+a[r_] := 1 + (2 gm)/(c^2 r^2) - (r0/r) f[r];
+g = DiagonalMatrix[{-a[r] c^2, 1/a[r]}];
+
+(* --- Christoffel Symbol Γ^r_{rr} --- *)
+GammaRrr[r_] := (4 Exp[r0/r] (-r + r0)) / (2 r (Exp[r0/r] (2 + r^2) - r r0))
+Plot[GammaRrr[r] /. r0 -> 1, {r, 0.2, 5},
+ PlotLabel -> "Christoffel Symbol Γ^r_{rr} vs r",
+ AxesLabel -> {"r", "Γ^r_{rr}"},
+ PlotStyle -> Thick, GridLines -> Automatic]
+
+(* --- Ricci Tensor --- *)
+RicciTensor[g, coords2D]
