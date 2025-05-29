@@ -60,6 +60,5 @@ This supports interpretation of the metric as:
 ## 🔄 Next
 
 📄 See [`docs/stress-energy.md`](./stress-energy.md) for energy condition diagnostics,  
-📄 See [`docs/energy-conditions.md`](./energy-conditions.md) for violation trends,
-
+📄 See [`docs/energy-conditions.md`](./energy-conditions.md) for violation trends, 
 📄 Or return to the metric definition in [`README.md`](../README.md) for model overview.
