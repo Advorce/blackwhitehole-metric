@@ -7,17 +7,20 @@ This project presents a custom-constructed, regular black hole metric designed t
 This spacetime metric is defined as:
 
 ```markdown
-ds² = -[1 + (c² r²)/(2GM) - (r/r_min) * exp(-r_min/r)] * (dt² / c²)
-     + [1 + (c² r²)/(2GM) - (r/r_min) * exp(-r_min/r)]⁻¹ dr²
-     + r² (dθ² + sin²θ dφ²)
+ds² = -[1 + (2GM)/(c² r²) - (r_min/r) * exp(-r_min/r)] * c² dt²
++ [1 + (2GM)/(c² r²) - (r_min/r) * exp(-r_min/r)]⁻¹ dr²
++ r² (dθ² + sin²θ dφ²)
 ```
 
 Where:
-- `r_min` is a minimal radius representing a bounce point
-- `f(r) = exp(-r_min / r)` is a smooth, regularizing function
-- `M` is the central object's mass
-- `G` is the gravitational constant
-- `c` is the speed of light
+- \( G \): gravitational constant  
+- \( M \): mass of the central object  
+- \( c \): speed of light  
+- \( r \): radial coordinate  
+- \( r_{\min} \): minimum radius (bounce point)  
+- \( f(r) = \exp(-r_{\min} / r) \): regularizing function
+
+This form preserves the classical behavior of gravity at large \( r \) and avoids divergence at the core through a smooth, exponential damping term.
 
 ## ✅ Novel Features
 
