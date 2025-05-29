@@ -58,7 +58,7 @@ Radial timelike geodesics were computed using:
 
 ### Plot:
 
-![GeodesicPlot](../images/bounce_plot.png)
+![GeodesicPlot](https://i.postimg.cc/MHQ6YDnM/Screenshot-2025-05-29-124011.png)
 
 ---
 
