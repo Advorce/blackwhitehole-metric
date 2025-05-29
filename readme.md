@@ -6,7 +6,6 @@ This project presents a custom-constructed, regular black hole metric designed t
 
 This spacetime metric is defined as:
 
-```math
 ds² = -[1 + (c² r²)/(2GM) - (r/r_min) * exp(-r_min/r)] * (dt² / c²)
      + [1 + (c² r²)/(2GM) - (r/r_min) * exp(-r_min/r)]⁻¹ dr²
      + r² (dθ² + sin²θ dφ²)
