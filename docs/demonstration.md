@@ -1,85 +1,103 @@
 # 🔬 Demonstration of the Black-to-White Hole Metric
 
-This document summarizes the key findings from simulations performed using the metric defined as:
+This document presents simulated geodesics in the custom black–white hole metric, which replaces the central singularity of a black hole with a smooth, traversable bounce.
 
-## ✴️ Metric
+---
+
+## ✴️ Metric Definition
+
+The line element is given by:
 
 \[
-A(r) = 1 + \frac{2GM}{c^2 r^2} - \frac{r_{\min}}{r} \cdot e^{-r_{\min}/r}
+ds^2 = -A(r)\, c^2 dt^2 + \frac{1}{A(r)} dr^2 + r^2 \left(d\theta^2 + \sin^2\theta\, d\phi^2\right)
 \]
 
-The spacetime line element:
+with
 
 \[
-ds^2 = -A(r) \cdot c^2 dt^2 + \frac{1}{A(r)} dr^2 + r^2 (d\theta^2 + \sin^2\theta\, d\phi^2)
+A(r) = 1 + \frac{2GM}{c^2 r^2} - \frac{r_{\min}}{r} \cdot \exp\left(-\frac{r_{\min}}{r}\right)
 \]
 
 Where:
-- \( G \): Gravitational constant
-- \( M \): Mass of the object
-- \( c \): Speed of light
-- \( r_{\min} \): Minimal core radius
-- \( A(r) \): Metric function regularized at the core
+- \( G \), \( c \), \( M \): Fundamental constants (rescaled to 1 in simulation)
+- \( r_{\min} \): Bounce/core scale
+- \( A(r) \): Regularized lapse function
 
 ---
 
-## 🧠 Motivation
+## 🧠 Physical Motivation
 
-This metric was constructed to:
-- Avoid singularities present in Schwarzschild geometry
-- Preserve geodesic completeness
-- Allow bounce-like motion through a regularized core
+This metric is designed to:
+- Eliminate the Schwarzschild singularity
+- Enable geodesic completeness
+- Realize a **black-to-white hole transition** through a smooth core
+- Emulate bounce cosmology in a localized setting
 
 ---
 
-## 🧪 Numerical Simulation
+## 🧪 Geodesic Simulation
 
-Radial timelike geodesics were computed using:
+A timelike radial geodesic was integrated using:
 
 - Wolfram Language (`NDSolve`)
-- Rescaled units: \( c = G = M = 1 \)
-- Initial radius: \( r(0) = 10 \)
-- Initial inward velocity: \( v(0) = -0.5 \)
+- Rescaled units: \( G = c = M = 1 \)
+- Initial data:  
+  \( r(0) = 10 \),  
+  \( v(0) = -0.5 \) (infall velocity)
 
-### Key Settings:
+Solver settings:
 - `MaxStepFraction → 1/1000`
 - `Method → "StiffnessSwitching"`
 - `AccuracyGoal → 15`
 
 ---
 
-## 📈 Results
+## 📈 Numerical Results
 
-- The particle smoothly falls inward from \( r = 10 \)
-- At \( \tau \approx 17 \), it reaches a **minimum radius** (bounce point)
-- It then **reverses direction** and continues outward
-- No singularity or divergence observed
-- Geodesic is **smooth, continuous, and physically meaningful**
+The output reveals:
 
-### Plot:
+- Infall proceeds smoothly from \( r = 10 \)
+- A **bounce occurs near** \( r \approx r_{\min} = 1 \)
+- The geodesic continues outward post-bounce
+- No divergence, coordinate failure, or termination occurs
+
+### 📊 Plot: Radial Bounce
 
 ![GeodesicPlot](https://i.postimg.cc/MHQ6YDnM/Screenshot-2025-05-29-124011.png)
 
 ---
 
-## 📌 Interpretation
+## 🔍 Physical Interpretation
 
-- The core does not exhibit a curvature singularity
-- Energy conditions are likely violated near the bounce, consistent with modern quantum-corrected models
-- The solution is physically interpretable as a **black-to-white hole transition**, or a **wormhole-style bounce**
-
----
-
-## 🧾 Conclusion
-
-This metric demonstrates:
-- Singularity avoidance
-- Geodesic completeness
-- Physical plausibility
-- Numerical tractability
-
-It serves as an independent, alternative regular black hole geometry.
+- **Geodesic completeness:** The path extends through the bounce
+- **Singularity avoidance:** Verified by finiteness of the Kretschmann scalar
+- **Effective matter support:** Stress-energy tensor extracted and analyzed
+- **Mild energy condition violations:** Localized near bounce, consistent with quantum-corrected interiors
 
 ---
 
-© 2025 by Advorce. This document and model are released under CC BY-NC-ND 4.0.
+## 🧠 Cross-Referenced Tests
+
+| Validation Test                  | Result    | Docs Link |
+|----------------------------------|-----------|-----------|
+| Kretschmann scalar finiteness    | ✅ Pass   | [`curvature.md`](./curvature.md) |
+| Energy condition evaluation      | ✅ Partial| [`energy-conditions.md`](./energy-conditions.md) |
+| Causal structure & Penrose chart| ✅ Pass   | [`causal-structure.md`](./causal-structure.md) |
+| Einstein tensor consistency      | ✅ Pass   | [`stress-energy.md`](./stress-energy.md) |
+
+---
+
+## 📌 Conclusion
+
+This metric has now passed multiple independent consistency tests:
+
+✅ Smooth geodesics  
+✅ Finite curvature  
+✅ Traversable bounce  
+✅ No event horizon barrier
+
+It offers a viable, singularity-free alternative spacetime with a bounce structure that connects black hole collapse to white hole re-expansion.
+
+---
+
+© 2025 by Advorce. Released under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)
