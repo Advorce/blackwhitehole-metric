@@ -69,7 +69,9 @@ $$
 K(r) = R_{\mu\nu\rho\sigma} R^{\mu\nu\rho\sigma}
 $$
 
-This invariant is sensitive to all components of the Riemann tensor and is commonly used to test singularity resolution [3]. Our expression is lengthy but remains **manifestly finite** across all \( r \).
+This invariant is sensitive to all components of the Riemann tensor and is commonly used to test singularity resolution [3] — where curvature invariants are introduced and used to probe the presence of singularities.
+
+Our symbolic expression is lengthy but remains **manifestly finite** across all \( r \).
 
 ---
 
@@ -77,8 +79,11 @@ This invariant is sensitive to all components of the Riemann tensor and is commo
 
 We plotted both the Ricci and Kretschmann scalars numerically:
 
-- Ricci: ![Ricci Scalar Plot](https://www.wolframcloud.com/obj/334a0aef-05f1-48c3-aa6a-ba27629585d0)
-- Kretschmann: ![Kretschmann Scalar Plot](https://www.wolframcloud.com/obj/kretschmann-placeholder-link)
+- Ricci:  
+  ![Ricci Scalar Plot](https://www.wolframcloud.com/obj/334a0aef-05f1-48c3-aa6a-ba27629585d0)
+
+- Kretschmann:  
+  ![Kretschmann Scalar Plot](https://www.wolframcloud.com/obj/1d9322f7-2590-46b5-aced-34d5f06ac439)
 
 These confirm:
 
@@ -108,7 +113,7 @@ All derivations are included in the interactive Mathematica notebook:
 
 1. Carroll, S. *Spacetime and Geometry*, Ch. 3–5  
 2. Hawking & Ellis, *The Large Scale Structure of Spacetime*  
-3. Wald, R. *General Relativity*, Sec. 6.3  
+3. Wald, R. *General Relativity*, Sec. 6.3 — where curvature invariants are introduced and used to test for singularities  
 4. Simpson & Visser, *Black-bounce metrics*, [arXiv:1812.07114](https://arxiv.org/abs/1812.07114)
 
 ---
@@ -117,4 +122,4 @@ All derivations are included in the interactive Mathematica notebook:
 
 - Compute full Riemann tensor \( R^\rho_{\ \sigma\mu\nu} \)  
 - Cross-validate curvature against Schwarzschild and bounce models  
-- Add symbolic expression comparisons across asymptotic and core regions  
+- Add symbolic expression comparisons across asymptotic and core regions
