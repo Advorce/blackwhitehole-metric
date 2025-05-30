@@ -1,50 +1,79 @@
 (* ::Section:: *)
 (*Symbolic Tensor Tests*)
 
-(* ::Text:: *)
-(*This notebook verifies the Christoffel symbols, Ricci tensor, and Ricci scalar for the black-to-white hole metric.*)
+(* This notebook verifies the Christoffel symbols, Ricci tensor, and Ricci scalar 
+   for the black-to-white hole metric introduced in the Advorce project. *)
 
 (* ::Section:: *)
 (*1. Metric Setup*)
+
 coords = {t, r};
+ClearAll[f, a];
+
+(* Define regularizing function and metric component *)
 f[r_] := Exp[-r0/r];
-a[r_] := 1 + (2 g m)/(c^2 r^2) - (r0/r) f[r];
-metric = DiagonalMatrix[{-a[r] c^2, 1/a[r]}];
+a[r_] := 1 + (2*g*m)/(c^2*r^2) - (r0/r)*f[r];
+
+(* Assign numerical units for visualization later *)
+c = 1; g = 1; m = 1; r0 = 1;
+
+(* Define diagonal metric tensor in (t, r) *)
+metric = DiagonalMatrix[{-a[r]*c^2, 1/a[r]}];
+metric
 
 (* ::Section:: *)
 (*2. Christoffel Symbols*)
-(* Compute Γ^r_{tt}, Γ^r_{rr}, Γ^t_{tr} *)
+
 dim = 2;
 g = metric;
 gInv = Simplify[Inverse[g]];
+
+(* Compute full set of Christoffel symbols: Γ^μ_{νρ} *)
 Christoffel = Table[
-  Sum[(1/2) gInv[[mu, sigma]] (
-    D[g[[sigma, rho]], coords[[nu]]] + D[g[[sigma, nu]], coords[[rho]]] - D[g[[nu, rho]], coords[[sigma]]]),
-   {sigma, 1, dim}],
+  Sum[
+    (1/2) gInv[[mu, sigma]] *
+     (D[g[[sigma, rho]], coords[[nu]]] +
+      D[g[[sigma, nu]], coords[[rho]]] -
+      D[g[[nu, rho]], coords[[sigma]]]),
+    {sigma, dim}],
   {mu, dim}, {nu, dim}, {rho, dim}];
+
+(* Examples: Γ^r_{tt}, Γ^r_{rr}, Γ^t_{tr} *)
+MatrixForm[Christoffel[[2, 1, 1]]]  (* Γ^r_{tt} *)
+MatrixForm[Christoffel[[2, 2, 2]]]  (* Γ^r_{rr} *)
+MatrixForm[Christoffel[[1, 1, 2]]]  (* Γ^t_{tr} *)
 
 (* ::Section:: *)
 (*3. Ricci Tensor R_{\[Mu]\[Nu]}*)
+
 Ricci = Table[
   Sum[
-   D[Christoffel[[sigma, mu, nu]], coords[[sigma]]] - 
-   D[Christoffel[[sigma, mu, sigma]], coords[[nu]]] + 
-   Sum[Christoffel[[lambda, mu, nu]] Christoffel[[sigma, lambda, sigma]] - 
-       Christoffel[[lambda, mu, sigma]] Christoffel[[sigma, lambda, nu]],
-     {lambda, dim}],
-   {sigma, dim}],
+    D[Christoffel[[sigma, mu, nu]], coords[[sigma]]] - 
+    D[Christoffel[[sigma, mu, sigma]], coords[[nu]]] + 
+    Sum[
+      Christoffel[[lambda, mu, nu]]*Christoffel[[sigma, lambda, sigma]] -
+      Christoffel[[lambda, mu, sigma]]*Christoffel[[sigma, lambda, nu]],
+      {lambda, dim}],
+    {sigma, dim}],
   {mu, dim}, {nu, dim}];
+
+MatrixForm[Ricci]
 
 (* ::Section:: *)
 (*4. Ricci Scalar R*)
-RicciScalar = Simplify[Sum[gInv[[mu, nu]] Ricci[[mu, nu]], {mu, dim}, {nu, dim}]];
 
-(* ::Section::Closed:: *)
+RicciScalar = Simplify[
+  Sum[gInv[[mu, nu]] Ricci[[mu, nu]], {mu, dim}, {nu, dim}]
+];
+RicciScalar
+
+(* ::Section:: *)
 (*5. Plot Ricci Scalar*)
+
 Plot[
- Evaluate[RicciScalar /. {c -> 1, g -> 1, m -> 1, r0 -> 1}], 
- {r, 0.3, 5}, 
- PlotLabel -> "Ricci Scalar vs r", 
- AxesLabel -> {"r", "R(r)"}, 
- PlotStyle -> Thick
+  RicciScalar /. {c -> 1, g -> 1, m -> 1, r0 -> 1},
+  {r, 0.3, 5},
+  PlotLabel -> "Ricci Scalar vs r",
+  AxesLabel -> {"r", "R(r)"},
+  PlotStyle -> Thick
 ]
