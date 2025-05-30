@@ -23,7 +23,9 @@ These conditions are traditionally used to characterize physically reasonable ma
 
 Below is a plot showing the variation of energy density \( \rho \), radial pressure \( p_r \), and the Null Energy Condition (NEC: \( \rho + p_r \)) as a function of radius:
 
-![Energy Conditions Plot](https://i.postimg.cc/J7SzghBL/Screenshot-2025-05-29-155723.png)
+![Energy Conditions Plot](https://www.wolframcloud.com/obj/8ff56eb4-113a-470c-9808-396ea70ababa)
+
+This plot numerically evaluates the NEC, WEC, and SEC across radius \( r \), based on the symbolically derived stress-energy tensor \( T_{\mu\nu} \). Violations emerge smoothly near the bounce and diminish asymptotically.
 
 ---
 
@@ -31,8 +33,8 @@ Below is a plot showing the variation of energy density \( \rho \), radial press
 
 - ✅ **Near the bounce (small \( r \))**: All energy conditions are satisfied or only mildly violated. This supports the viability of the geometry near the core ([2](#2), [7](#7)).
 - ❌ **At larger radius**: NEC and WEC become **increasingly violated**, but these violations are:
-  - Localized
-  - Small in magnitude
+  - Localized  
+  - Small in magnitude  
   - Non-divergent
 
 This is **typical** for quantum-inspired bounce models ([3](#3), [5](#5)).
@@ -41,12 +43,12 @@ This is **typical** for quantum-inspired bounce models ([3](#3), [5](#5)).
 
 ## 🧪 Physical Meaning
 
-| Condition | Meaning                                  | Notes |
-|-----------|------------------------------------------|-------|
-| NEC       | No faster-than-light energy transfer     | Mildly violated beyond core |
-| WEC       | Energy density is non-negative           | Breaks down at \( r > 2 \) |
-| SEC       | Gravity remains attractive               | Still satisfied everywhere |
-| DEC       | Energy flux stays subluminal             | Fails mildly at large \( r \) |
+| Condition | Meaning                                  | Notes                          |
+|-----------|------------------------------------------|--------------------------------|
+| NEC       | No faster-than-light energy transfer     | Mildly violated beyond core    |
+| WEC       | Energy density is non-negative           | Breaks down at \( r > 2 \)     |
+| SEC       | Gravity remains attractive               | Still satisfied everywhere     |
+| DEC       | Energy flux stays subluminal             | Fails mildly at large \( r \)  |
 
 ---
 
@@ -60,9 +62,9 @@ These results align with findings from:
 
 ✅ Your metric exhibits:
 
-- Finite curvature (no singularity)
-- Einstein equation consistency
-- Schwarzschild asymptotics
+- Finite curvature (no singularity)  
+- Einstein equation consistency  
+- Schwarzschild asymptotics  
 - **Localized exotic matter** behavior
 
 This supports its interpretation as a **plausible bounce geometry** under extended physical models.
