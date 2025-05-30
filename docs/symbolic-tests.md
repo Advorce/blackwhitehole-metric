@@ -65,11 +65,17 @@ This function remains finite for all \( r \) and falls off asymptotically — co
 
 ---
 
-## 🔄 Next Steps
+## 🔬 Reproducibility
 
-- Compute Riemann tensor \( R^\rho_{\ \sigma\mu\nu} \)
-- Compare with Schwarzschild curvature profile
-- Integrate full results into energy condition & bounce docs
+All calculations shown above can be reproduced using:
+
+📄 [`symbolic-tests.nb`](../symbolic-tests.nb)
+
+This Mathematica notebook includes:
+
+- Full Christoffel symbol derivations
+- Ricci tensor and scalar computation
+- Ricci scalar plot confirming finiteness across all \( r \)
 
 ---
 
