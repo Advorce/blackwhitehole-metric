@@ -63,7 +63,8 @@ Such violations do not indicate unphysical behavior. They are consistent with ma
 
 This model does not specify the stress-energy tensor required to support the geometry, but assumes a physically plausible form of exotic matter or effective quantum corrections that allow for this regular, traversable interior ([1](#1), [2](#2)).
 
-📊 See: [Simulation Demonstration](docs/demonstration.md)
+📊 See: [Simulation Demonstration](docs/demonstration.md)  
+📄 See also: [Symbolic Tensor Verification (Notebook)](symbolic-tests.nb)
 
 ---
 
