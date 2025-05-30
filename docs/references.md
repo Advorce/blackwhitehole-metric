@@ -1,65 +1,57 @@
-# 📚 References & Background Literature
+# 📚 References
 
-This document catalogs the scientific and conceptual sources that underpin the construction, interpretation, and critique of the bounce-based black hole metric used in this repository.
-
----
-
-## 🔭 Regular Black Hole Models
-
-| Reference | Description |
-|----------|-------------|
-| [1] Bardeen, J. (1968) | First proposal of a **non-singular black hole**. Introduced a toy model where \( T_{\mu\nu} \neq 0 \) in the core. |
-| [2] Hayward, S.A. (2006) | Proposed a **dynamically evaporating regular BH** with time-dependent mass [Phys. Rev. Lett. 96, 031103](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.96.031103). |
-| [3] Simpson & Visser (2019) | Developed **black-bounce metrics** interpolating between BH and wormhole geometries [arXiv:1812.07114](https://arxiv.org/abs/1812.07114). |
+This document catalogs the full reference list used across this project, organized by topic. Each entry includes a citation and direct link to the original source or publication.
 
 ---
 
-## 🧠 Quantum-Corrected Bounces
+## 🔬 Regular Black Holes & Bounce Metrics
 
-| Reference | Description |
-|----------|-------------|
-| [4] Ashtekar & Bojowald (2005) | Bounce scenarios in **loop quantum gravity** resolving cosmological singularities [arXiv:gr-qc/0504029](https://arxiv.org/abs/gr-qc/0504029). |
-| [5] Han et al. (2023) | Numerical studies of black–white hole **quantum transition geometries** [arXiv:2302.00792](https://arxiv.org/abs/2302.00792). |
-| [6] Feng et al. (2022) | Demonstrated **effective stress-energy tensors** violating NEC in LQG-like models [arXiv:2205.03167](https://arxiv.org/abs/2205.03167). |
+- [1] S. Hossenfelder, *How to avoid black hole singularities*  
+  [Backreaction Blog (2020)](https://backreaction.blogspot.com/2020/01/how-to-avoid-black-hole-singularities.html)
 
----
+- [2] Han et al., *Quantum-corrected black–white transitions*  
+  [arXiv:2302.00792](https://arxiv.org/abs/2302.00792)
 
-## 📉 Mass Profile and Curvature Control
+- [3] Feng et al., *Effective matter and NEC violation*  
+  [arXiv:2205.03167](https://arxiv.org/abs/2205.03167)
 
-| Reference | Description |
-|----------|-------------|
-| [7] Hergott et al. (2022) | Models using smooth mass functions to control curvature and horizon structure [arXiv:2211.16499](https://arxiv.org/abs/2211.16499). |
+- [4] Hergott et al., *Mass profiles and bounce duration*  
+  [arXiv:2211.16499](https://arxiv.org/abs/2211.16499)
 
----
-
-## ⚠️ Cautionary Critique
-
-| Reference | Description |
-|----------|-------------|
-| [8] S. Hossenfelder (2020) | Critical perspective on nonsingular metrics and quantum effects [Backreaction Blog](https://backreaction.blogspot.com/2020/01/how-to-avoid-black-hole-singularities.html). Warns of “patching the hole with a kitten picture” if quantum corrections are not physically derived. |
+- [5] Simpson & Visser, *Black-bounce metrics*  
+  [arXiv:1812.07114](https://arxiv.org/abs/1812.07114)
 
 ---
 
-## 🧮 Mathematical Infrastructure
+## 🌀 Classical Models & Regularization Proposals
 
-| Reference | Description |
-|----------|-------------|
-| [9] Wald, R.M. (1984) | Standard reference for general relativity and energy conditions. Used to derive NEC, WEC, SEC, and DEC conditions. |
+- [6] S.A. Hayward, *Formation and evaporation of regular black holes*  
+  [Phys. Rev. Lett. 96, 031103](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.96.031103)
 
----
+- [7] Ashtekar & Bojowald, *Loop quantum gravity bounce models*  
+  [arXiv:gr-qc/0504029](https://arxiv.org/abs/gr-qc/0504029)
 
-## 🔁 Usage Across Docs
-
-These references are cited throughout:
-
-- [`README.md`](../README.md) — overview of goals, physical assumptions
-- [`stress-energy.md`](./stress-energy.md) — Einstein tensor derivation
-- [`energy-conditions.md`](./energy-conditions.md) — evaluation of classical conditions
-- [`causal-structure.md`](./causal-structure.md) — Penrose diagram and completeness
-- [`limitations.md`](./limitations.md) — explicit assumptions and open problems
+- [8] J. Bardeen, *Non-singular solutions in general relativity*  
+  In: Proceedings of the International Conference GR5, Tbilisi (1968)
 
 ---
 
-## 📌 Note
+## 🛠️ Technical & Symbolic Verification (This Repo)
 
-All referenced material is intended for non-commercial academic exploration under fair-use and CC-NC licenses where applicable. Please consult the primary sources for detailed derivations or results.
+- [`docs/symbolic-summary.md`](./symbolic-summary.md) – Derivation of Christoffel symbols, Ricci tensor, and scalar  
+- [`docs/symbolic-tests.nb`](./symbolic-tests.nb) – Mathematica notebook with symbolic computations and plots
+
+---
+
+## 🧪 Energy Conditions & Quantum Matter
+
+- See [Feng et al.](https://arxiv.org/abs/2205.03167) and [Simpson & Visser](https://arxiv.org/abs/1812.07114) for modern treatments of NEC/WEC violation in non-singular spacetimes.
+
+---
+
+## 🔄 Related Frameworks (Suggested Extensions)
+
+- Loop Quantum Gravity: [Ashtekar & Bojowald, arXiv:gr-qc/0504029](https://arxiv.org/abs/gr-qc/0504029)
+- Planck Stars and Semiclassical Collapse: See references [2], [3], and [5].
+
+---
