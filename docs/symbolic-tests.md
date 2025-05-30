@@ -1,18 +1,25 @@
-# 🧪 Symbolic Tests
+# 🧮 Symbolic Summary: Curvature & Geometry
 
-This document presents detailed symbolic computations for validating the geometry of the bounce metric. It includes derivations of Christoffel symbols, Ricci tensor components, and the Ricci scalar.
+This document presents a symbolic derivation of key geometric objects associated with the black-to-white hole bounce metric introduced in this project.
+
+It verifies the internal consistency of the metric via computation of:
+
+- Christoffel symbols
+- Ricci tensor \( R_{\mu\nu} \)
+- Ricci scalar \( R \)
+- Curvature regularity via plots and expressions
 
 ---
 
-## 1. ✴️ Metric Definition
+## ✴️ Metric Definition
 
-We declared the 2D section of the spacetime metric:
+The spacetime metric under study is:
 
 $$
-ds^2 = -f(r)\, c^2\, dt^2 + \frac{1}{f(r)}\, dr^2
+ds^2 = -f(r)c^2 dt^2 + \frac{1}{f(r)} dr^2 + r^2 (d\theta^2 + \sin^2 \theta d\phi^2)
 $$
 
-with:
+with
 
 $$
 f(r) = 1 + \frac{2GM}{c^2 r^2} - \frac{r_{\min}}{r} e^{-r_{\min}/r}
@@ -20,55 +27,52 @@ $$
 
 ---
 
-## 2. 🔧 Christoffel Symbols
+## 🔧 Christoffel Symbols
 
-Key components were symbolically computed:
+We manually computed the following components:
 
 - \( \Gamma^r_{tt} \)
 - \( \Gamma^r_{rr} \)
 - \( \Gamma^t_{tr} \)
 
-Each of these behaved regularly near the bounce radius \( r_{\min} \). No singularities were observed in the symbolic form.
+Each exhibits finite, well-defined behavior near the bounce radius \( r_{\min} \).
 
 ---
 
-## 3. 🧠 Ricci Tensor \( R_{\mu\nu} \)
+## 🧠 Ricci Tensor and Scalar
 
-Using the Christoffel symbols, we constructed the Ricci tensor. All components were verified to:
-
-- ✅ Remain finite throughout the domain  
-- ✅ Show regularity near \( r \to r_{\min} \)  
-- ✅ Decay asymptotically for large \( r \)
-
----
-
-## 4. 🔂 Ricci Scalar \( R \)
-
-The Ricci scalar was computed as:
+From the Christoffel symbols we computed the Ricci tensor \( R_{\mu\nu} \), then contracted to obtain the scalar curvature:
 
 $$
-R = g^{\mu\nu} R_{\mu\nu}
+R(r) = g^{\mu\nu} R_{\mu\nu}
 $$
 
-And plotted symbolically over a range of \( r \), confirming:
-
-- ✅ No singularity at the bounce  
-- ✅ Asymptotic flatness at large radius  
+This function remains finite for all \( r \) and falls off asymptotically — confirming the regularity of the geometry.
 
 ---
 
-## 📈 Visual Output
+## 📈 Visualization
 
-A live notebook and cloud-linked visualizations are available in:
+![Ricci Scalar Plot](https://i.postimg.cc/J7SzghBL/Screenshot-2025-05-29-155723.png)
 
-- 📄 [`symbolic-tests.nb`](./symbolic-tests.nb)
-- 📊 ![Ricci Scalar Plot](https://www.wolframcloud.com/obj/334a0aef-05f1-48c3-aa6a-ba27629585d0)
+---
+
+## 🧪 Curvature Behavior
+
+- ✅ Ricci scalar finite at \( r_{\min} \)
+- ✅ Decays at large \( r \)
+- ✅ No curvature singularities observed
 
 ---
 
 ## 🔄 Next Steps
 
-- Extend to compute the full Riemann tensor  
-- Verify Kretschmann scalar regularity  
-- Compare curvature structure against classical Schwarzschild  
-- Export all derivations into standalone PDF/notebook for peer review
+- Compute Riemann tensor \( R^\rho_{\ \sigma\mu\nu} \)
+- Compare with Schwarzschild curvature profile
+- Integrate full results into energy condition & bounce docs
+
+---
+
+## 📂 Visual Notebook
+
+📄 [symbolic-tests.nb](../symbolic-tests.nb)
