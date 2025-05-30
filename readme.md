@@ -8,19 +8,22 @@ This project presents a custom-constructed, regular black hole metric designed t
 
 This spacetime metric is defined as:
 
-```
-ds² = -[1 + (2GM)/(c² r²) - (r_min/r) * exp(-r_min/r)] * c² dt²
-+ [1 + (2GM)/(c² r²) - (r_min/r) * exp(-r_min/r)]⁻¹ dr²
-+ r² (dθ² + sin²θ dφ²)
-```
+$$
+ds^2 = -f(r)c^2 dt^2 + \frac{1}{f(r)} dr^2 + r^2 (d\theta^2 + \sin^2 \theta d\phi^2)
+$$
+
+with:
+
+$$
+f(r) = 1 + \frac{2GM}{c^2 r^2} - \frac{r_{\min}}{r} e^{-r_{\min}/r}
+$$
 
 Where:
 - \( G \): gravitational constant  
 - \( M \): mass of the central object  
 - \( c \): speed of light  
 - \( r \): radial coordinate  
-- \( r_{\min} \): minimum radius (bounce point)  
-- \( f(r) = \exp(-r_{\min} / r) \): regularizing function
+- \( r_{\min} \): minimum radius (bounce point)
 
 This form preserves the classical behavior of gravity at large \( r \) and avoids divergence at the core through a smooth, exponential damping term ([1](#1), [2](#2)).
 
@@ -28,9 +31,9 @@ This form preserves the classical behavior of gravity at large \( r \) and avoid
 
 ## ✅ Novel Features
 
-- **Nonsingular core**: The metric remains finite as `r → 0`, avoiding curvature divergence ([2](#2), [4](#4)).
-- **Geodesic completeness**: Particles can pass through `r_min`, experiencing a bounce ([2](#2), [7](#7)).
-- **Asymptotic Schwarzschild**: The metric reduces to Schwarzschild at large `r` ([4](#4)).
+- **Nonsingular core**: The metric remains finite as \( r \to 0 \), avoiding curvature divergence ([2](#2), [4](#4)).
+- **Geodesic completeness**: Particles can pass through \( r_{\min} \), experiencing a bounce ([2](#2), [7](#7)).
+- **Asymptotic Schwarzschild**: The metric reduces to Schwarzschild at large \( r \) ([4](#4)).
 - **Independent creation**: This functional form does not match known regular metrics like Bardeen ([8](#8)) or Hayward ([6](#6)) and was developed independently by the author.
 
 ---
@@ -61,6 +64,18 @@ Such violations do not indicate unphysical behavior. They are consistent with ma
 This model does not specify the stress-energy tensor required to support the geometry, but assumes a physically plausible form of exotic matter or effective quantum corrections that allow for this regular, traversable interior ([1](#1), [2](#2)).
 
 📊 See: [Simulation Demonstration](docs/demonstration.md)
+
+---
+
+## 📚 Documentation
+
+- 🧮 [Symbolic Summary](docs/symbolic-summary.md): Derivation of Christoffel symbols, Ricci tensor, and Ricci scalar  
+- 🧪 [Symbolic Tests Notebook](docs/symbolic-tests.nb): Mathematica notebook for full symbolic curvature validation  
+- 📄 [Stress-Energy Tensor](docs/stress-energy.md): Energy densities and pressures from Einstein tensor  
+- 📄 [Energy Conditions](docs/energy-conditions.md): Analysis of NEC, WEC, SEC, and DEC violations  
+- 📄 [Causal Structure](docs/causal-structure.md): Penrose diagram and geodesic completeness  
+- 📄 [Limitations](docs/limitations.md): Known idealizations, open issues, and boundary cases  
+- 📄 [References](docs/references.md): External sources and background literature  
 
 ---
 
