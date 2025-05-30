@@ -76,4 +76,39 @@ Plot[
   PlotLabel -> "Ricci Scalar vs r",
   AxesLabel -> {"r", "R(r)"},
   PlotStyle -> Thick
+];
+
+(* ::Section:: *)
+(*6. Kretschmann Scalar R_{\[Mu]\[Nu]\[Rho]\[Sigma]} R^{\[\Mu]\[\Nu]\[\Rho]\[\Sigma]}*)
+
+(* Compute Riemann tensor R^\mu_{\ \nu\rho\sigma} *)
+Riemann = Table[
+  D[Christoffel[[mu, nu, sigma]], coords[[rho]]] -
+  D[Christoffel[[mu, nu, rho]], coords[[sigma]]] +
+  Sum[
+    Christoffel[[mu, lambda, rho]] Christoffel[[lambda, nu, sigma]] -
+    Christoffel[[mu, lambda, sigma]] Christoffel[[lambda, nu, rho]],
+    {lambda, dim}],
+  {mu, dim}, {nu, dim}, {rho, dim}, {sigma, dim}
+];
+
+(* Compute Kretschmann scalar: R_{\[Mu]\[Nu]\[Rho]\[Sigma]} R^{\[\Mu]\[\Nu]\[\Rho]\[\Sigma]} *)
+Kretschmann = Simplify[
+  Sum[
+    gInv[[mu1, mu2]] * gInv[[nu1, nu2]] *
+    Riemann[[mu1, nu1, rho, sigma]] * Riemann[[mu2, nu2, rho, sigma]],
+    {mu1, dim}, {mu2, dim}, {nu1, dim}, {nu2, dim}, {rho, dim}, {sigma, dim}]
+];
+Kretschmann
+
+(* ::Section:: *)
+(*7. Plot Kretschmann Scalar*)
+
+Plot[
+  Kretschmann /. {c -> 1, g -> 1, m -> 1, r0 -> 1},
+  {r, 0.3, 5},
+  PlotLabel -> "Kretschmann Scalar vs r",
+  AxesLabel -> {"r", "K(r)"},
+  PlotStyle -> {Thick, Darker@Red}
 ]
+
