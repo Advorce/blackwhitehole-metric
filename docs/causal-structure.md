@@ -6,22 +6,22 @@ This document outlines the global causal structure of the spacetime defined by t
 
 ## ✅ Summary of Causal Features
 
-| Feature                | Description                                                                 |
-|------------------------|-----------------------------------------------------------------------------|
-| Geodesic completeness  | No geodesics terminate; bounce avoids singularities ([2](#2), [5](#5))     |
-| Bounce                 | Occurs near \( r = r_{\min} \); finite curvature replaces classical singularity ([1](#1), [4](#4)) |
-| Apparent horizons      | Strong-field effects mimic horizons without causal disconnection ([5](#5)) |
-| Asymptotic flatness    | Metric smoothly approaches flat spacetime at large \( r \) ([4](#4))        |
-| Null structure         | Lightcones tilt correctly; no causal breakdown observed ([2](#2))          |
-| Causal traversability  | Timelike and null curves pass through the bounce ([3](#3), [7](#7))         |
+| Feature               | Description                                                                 |
+|-----------------------|-----------------------------------------------------------------------------|
+| Geodesic completeness | No geodesics terminate; bounce avoids singularities ([2](#2), [5](#5))     |
+| Bounce                | Occurs near \( r = r_{\min} \); finite curvature replaces classical singularity ([1](#1), [4](#4)) |
+| Apparent horizons     | Strong-field effects mimic horizons without causal disconnection ([5](#5)) |
+| Asymptotic flatness   | Metric smoothly approaches flat spacetime at large \( r \) ([4](#4))        |
+| Null structure        | Lightcones tilt correctly; no causal breakdown observed ([2](#2))          |
+| Causal traversability | Timelike and null curves pass through the bounce ([3](#3), [7](#7))         |
 
 ---
 
-## 📐 Penrose Diagram
+## 📐 Penrose Diagrams
 
-The compactified Penrose diagram below reveals the causal layout of the entire spacetime. This includes the bounce region, light-cone structure, and asymptotic null boundaries.
+These diagrams illustrate the causal layout of the entire spacetime, including the bounce region, light-cone behavior, and asymptotic null boundaries.
 
-### 📊 Annotated Penrose Diagram
+### 📊 Annotated (Schematic) Penrose Diagram
 
 ![Penrose Diagram](https://i.postimg.cc/nrZK4tfj/Screenshot-2025-05-29-160710.png)
 
@@ -29,34 +29,50 @@ The compactified Penrose diagram below reveals the causal layout of the entire s
 - 🔴 **Red diagonals**: 45° null rays crossing the bounce  
 - **Axes**: conformally compactified coordinates \( U \), \( V \)
 
+### 📉 Computed Compactified Diagram from Null Geodesics
+
+We numerically solved outgoing and ingoing radial null geodesics and applied a conformal compactification:
+
+\[
+U = \tanh(t - r_*), \quad V = \tanh(t + r_*)
+\]
+
+Then visualized causal flow:
+
+![Compactified Penrose Diagram](https://www.wolframcloud.com/obj/1609c19f-fc58-47fd-8667-7d169295b2d2)
+
+**Interpretation:**
+- Each curve represents a null geodesic crossing the core  
+- Lightcones are regular across the bounce  
+- Global structure is symmetric under time reversal  
+- Confirms **causal extendibility** and **bounce transparency**
+
 ---
 
 ## 🧪 Radial Null Geodesics
 
-We directly solved the radial null geodesic equation:
+We directly solved the radial null condition:
 
 \[
 \frac{dr}{dt} = \pm f(r)c
 \]
 
-for the effective metric and visualized the outgoing/ingoing null rays.
+and plotted the solutions:
 
 ![Radial Null Geodesics](https://www.wolframcloud.com/obj/d62cebf6-6e98-4fd9-be02-5289ff49f53c)
 
-**Interpretation:**
-
-- Null geodesics are continuous and differentiable across the bounce  
-- No termination or horizon-related divergence  
-- Supports **geodesic completeness** and causal transparency
+- Outgoing and ingoing rays remain continuous  
+- No horizons or divergences occur  
+- Geodesics **propagate through** the bounce smoothly
 
 ---
 
 ## 🔍 Interpretation
 
-- The **bounce** is **causally transparent**: both null and timelike geodesics pass through the core without termination ([3](#3), [7](#7)).
-- **No event horizon** traps information permanently — causal contact is possible across the entire geometry ([2](#2), [5](#5)).
-- The diagram exhibits **global hyperbolicity**: the spacetime has a Cauchy surface and deterministic causal evolution.
-- The central region is **finite, regular, and symmetric** under time reversal — mimicking a smooth black-to-white hole transition ([4](#4), [6](#6)).
+- The **bounce** is **causally transparent**: both null and timelike geodesics pass through the core without termination ([3](#3), [7](#7))
+- **No event horizon** traps information permanently — causal contact is possible across the entire geometry ([2](#2), [5](#5))
+- The diagram exhibits **global hyperbolicity**: there exists a Cauchy surface and deterministic causal evolution
+- The central region is **finite, regular, and symmetric** under time reversal — mimicking a smooth black-to-white hole transition ([4](#4), [6](#6))
 
 ---
 
@@ -64,23 +80,23 @@ for the effective metric and visualized the outgoing/ingoing null rays.
 
 This causal structure reinforces the physical consistency of the metric:
 
-- ✅ **Singularity-free**: The central curvature remains finite (as shown via the Kretschmann scalar) ([1](#1), [2](#2))
+- ✅ **Singularity-free**: The central curvature remains finite (see Kretschmann scalar) ([1](#1), [2](#2))
 - ✅ **Geodesically complete**: All causal paths extend through the bounce ([3](#3), [7](#7))
 - ✅ **Traversable**: Matter and light are not causally disconnected
-- ✅ **Quantum-compatible**: Behavior matches predictions of loop quantum gravity and other regularization models ([7](#7))
+- ✅ **Quantum-compatible**: Matches predictions of loop quantum gravity and effective bounce cosmologies ([7](#7))
 
-This supports interpretation of the metric as:
+This supports interpreting the metric as:
 
 - A **regular black hole interior**  
-- A **quantum-corrected bounce cosmology**  
-- A candidate model for **black-to-white hole transition** or even a **Big Bounce cosmology**
+- A **quantum-corrected bounce geometry**  
+- A candidate for **black-to-white hole transition** or **cosmological bounce**
 
 ---
 
 ## 🔄 Next
 
-📄 See [`docs/stress-energy.md`](./stress-energy.md) for energy condition diagnostics  
-📄 See [`docs/energy-conditions.md`](./energy-conditions.md) for violation trends  
+📄 See [`docs/stress-energy.md`](./stress-energy.md) for Einstein tensor  
+📄 See [`docs/energy-conditions.md`](./energy-conditions.md) for NEC/WEC/SEC plots  
 📄 Or return to the model overview in [`README.md`](../README.md)
 
 ---
