@@ -1,7 +1,7 @@
 (* ::Section:: *)
 (*Symbolic Tensor Tests*)
 
-(* This notebook verifies the Christoffel symbols, Ricci tensor, and Ricci scalar 
+(* This notebook verifies the Christoffel symbols, Ricci tensor, and Kretschmann scalar 
    for the black-to-white hole metric introduced in the Advorce project. *)
 
 (* ::Section:: *)
@@ -72,7 +72,7 @@ RicciScalar
 
 Plot[
   RicciScalar /. {c -> 1, g -> 1, m -> 1, r0 -> 1},
-  {r, 0.3, 5},
+  {r, r0 + 0.01, 5},  (* Ensures r > r0 to avoid numerical instability *)
   PlotLabel -> "Ricci Scalar vs r",
   AxesLabel -> {"r", "R(r)"},
   PlotStyle -> Thick
@@ -81,7 +81,7 @@ Plot[
 (* ::Section:: *)
 (*6. Kretschmann Scalar R_{\[Mu]\[Nu]\[Rho]\[Sigma]} R^{\[\Mu]\[\Nu]\[\Rho]\[\Sigma]}*)
 
-(* Compute Riemann tensor R^\mu_{\ \nu\rho\sigma} *)
+(* Warning: Riemann tensor contracts over 6 indices — can be expensive symbolically *)
 Riemann = Table[
   D[Christoffel[[mu, nu, sigma]], coords[[rho]]] -
   D[Christoffel[[mu, nu, rho]], coords[[sigma]]] +
@@ -92,7 +92,6 @@ Riemann = Table[
   {mu, dim}, {nu, dim}, {rho, dim}, {sigma, dim}
 ];
 
-(* Compute Kretschmann scalar: R_{\[Mu]\[Nu]\[Rho]\[Sigma]} R^{\[\Mu]\[\Nu]\[\Rho]\[\Sigma]} *)
 Kretschmann = Simplify[
   Sum[
     gInv[[mu1, mu2]] * gInv[[nu1, nu2]] *
@@ -101,14 +100,16 @@ Kretschmann = Simplify[
 ];
 Kretschmann
 
+(* Export symbolic form (optional) *)
+Export["kretschmann-symbolic.txt", Kretschmann, "Text"]
+
 (* ::Section:: *)
 (*7. Plot Kretschmann Scalar*)
 
 Plot[
   Kretschmann /. {c -> 1, g -> 1, m -> 1, r0 -> 1},
-  {r, 0.3, 5},
+  {r, r0 + 0.01, 5},
   PlotLabel -> "Kretschmann Scalar vs r",
   AxesLabel -> {"r", "K(r)"},
   PlotStyle -> {Thick, Darker@Red}
 ]
-
