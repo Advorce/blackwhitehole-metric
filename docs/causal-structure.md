@@ -31,6 +31,26 @@ The compactified Penrose diagram below reveals the causal layout of the entire s
 
 ---
 
+## 🧪 Radial Null Geodesics
+
+We directly solved the radial null geodesic equation:
+
+\[
+\frac{dr}{dt} = \pm f(r)c
+\]
+
+for the effective metric and visualized the outgoing/ingoing null rays.
+
+![Radial Null Geodesics](https://www.wolframcloud.com/obj/d62cebf6-6e98-4fd9-be02-5289ff49f53c)
+
+**Interpretation:**
+
+- Null geodesics are continuous and differentiable across the bounce  
+- No termination or horizon-related divergence  
+- Supports **geodesic completeness** and causal transparency
+
+---
+
 ## 🔍 Interpretation
 
 - The **bounce** is **causally transparent**: both null and timelike geodesics pass through the core without termination ([3](#3), [7](#7)).
@@ -51,17 +71,17 @@ This causal structure reinforces the physical consistency of the metric:
 
 This supports interpretation of the metric as:
 
-- A **regular black hole interior**
-- A **quantum-corrected bounce cosmology**
+- A **regular black hole interior**  
+- A **quantum-corrected bounce cosmology**  
 - A candidate model for **black-to-white hole transition** or even a **Big Bounce cosmology**
 
 ---
 
 ## 🔄 Next
 
-📄 See [`docs/stress-energy.md`](./stress-energy.md) for energy condition diagnostics,  
-📄 See [`docs/energy-conditions.md`](./energy-conditions.md) for violation trends,  
-📄 Or return to the metric definition in [`README.md`](../README.md) for model overview.
+📄 See [`docs/stress-energy.md`](./stress-energy.md) for energy condition diagnostics  
+📄 See [`docs/energy-conditions.md`](./energy-conditions.md) for violation trends  
+📄 Or return to the model overview in [`README.md`](../README.md)
 
 ---
 
